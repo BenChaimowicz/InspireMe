@@ -1,0 +1,17 @@
+<mat-card class="inspiration">
+    <mat-card-header>
+      <h3>Get Inspired</h3>
+    </mat-card-header>
+    <mat-card-content>
+        <h6>{{inspiration.content}}</h6>
+        <hr>
+        <span>{{inspiration.origin}}</span>
+    </mat-card-content>
+    <mat-card-actions align="start">
+        <button mat-button (click)="previous()">Previous</button>
+        <button mat-button (click)="next()">Next</button>
+    </mat-card-actions>
+    <mat-card-footer>
+        Submitted by: {{inspiration.user}}
+    </mat-card-footer>
+</mat-card>
