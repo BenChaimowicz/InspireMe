@@ -1,17 +1,17 @@
 <mat-card class="inspiration">
     <mat-card-header>
-      <h3>Get Inspired</h3>
+      <h4>Inspiration</h4>
     </mat-card-header>
     <mat-card-content>
-        <h6>{{inspiration.content}}</h6>
+        <h2>{{inspiration.content}}</h2>
+        <h5> - {{inspiration.origin}}</h5>
         <hr>
-        <span>{{inspiration.origin}}</span>
     </mat-card-content>
     <mat-card-actions align="start">
-        <button mat-button (click)="previous()">Previous</button>
-        <button mat-button (click)="next()">Next</button>
+        <button mat-button (click)="previous()" [disabled]="firstOrLast">Previous</button>
+        <button mat-button (click)="next()" [disabled]="!firstOrLast">Next</button>
     </mat-card-actions>
     <mat-card-footer>
-        Submitted by: {{inspiration.user}}
+        <h6 style="margin-left:10px">Submitted by: {{inspiration.user}}</h6>
     </mat-card-footer>
 </mat-card>
